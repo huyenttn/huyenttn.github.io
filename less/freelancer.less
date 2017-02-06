@@ -19,7 +19,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-	color: @theme-success;
+	color: @theme-primary;
 	outline: none;
 }
 
@@ -221,15 +221,17 @@ section.success {
 
 #portfolio {
     .portfolio-item {
+        
         margin: 0 0 15px;
         right: 0;
         .portfolio-link {
+            text-decoration: none;
             display: block;
             position: relative;
             max-width: 400px;
             margin: 0 auto;
             .caption {
-                background: fade(@theme-success, 90%);
+                background: fade(@gray-lighter, 90%);
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -258,6 +260,7 @@ section.success {
                     }
                 }
             }
+            
         }
     }
     * {
@@ -363,6 +366,22 @@ footer {
 	&.active {
 		color: @theme-success;
 		background: white;
+		border: solid 2px white;
+	}
+}
+.btn-detail {
+	color: white;
+	font-size: 20px;
+	border: solid 2px white;
+	background: @theme-primary;
+	transition: all 0.3s ease-in-out;
+	margin-top: 15px;
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: @theme-success;
+		background: @theme-primary;
 		border: solid 2px white;
 	}
 }
